@@ -3,14 +3,14 @@ import React from 'react'
 export default class Main extends React.Component {
   constructor(props) {
     super(props)
-
+    this.openTab()
     // setTimeout(this.openTab, 5000)
   }
 
   openTab = () => {
     let newTabs = 1
     for (let i = 0; i < newTabs; i++) {
-      let newWindow = window.open('/', '_blank', 'width=300, height=200')
+      let newWindow = window.open('', '_blank', 'width=300, height=200')
       this.moveWindow(newWindow)
     }
   }
@@ -37,15 +37,6 @@ export default class Main extends React.Component {
 
   getRandomNum = (min, max) => {
     return Math.random() * (+max - +min) + +min;
-  }
-
-  render() {
-    return (
-      <React.Fragment>
-        <p>hi</p>
-        <button onClick={this.openTab}>Click Me!</button>
-      </React.Fragment>
-    )
   }
 
 }
