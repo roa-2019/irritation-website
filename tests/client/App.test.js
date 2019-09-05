@@ -2,6 +2,7 @@ import React from 'react'
 import Enzyme, {shallow, render, mount} from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import './setup-env'
+import request from 'superagent'
 
 import App from '../../client/components/App'
 App.prototype.componentDidMount = () => {}
@@ -28,4 +29,10 @@ test('renders an <li> for each fruit', () => {
   const wrapper = mount(<App />)
   wrapper.setState({fruits: ['orange', 'persimmons', 'kiwi fruit']})
   expect(wrapper.find('li').length).toBe(3)
+})
+
+test('api returns advice', () => {
+  request.get('api/v1/get-advice').then((advice) => {
+    console.log(advice)
+  })
 })

@@ -1,7 +1,8 @@
 import React from 'react'
-
-import Footer from './Footer'
+import { getFruits, getAdvice } from '../apiClient'
+// import Footer from './Footer'
 import Main from './Main'
+
 import Nav from './Nav'
 import Form from './Form'
 
