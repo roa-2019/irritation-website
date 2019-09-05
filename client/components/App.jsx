@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { getFruits } from '../apiClient'
+import { getFruits, getAdvice } from '../apiClient'
 
 class App extends React.Component {
   state = {
@@ -11,6 +11,10 @@ class App extends React.Component {
     getFruits()
       .then(fruits => {
         this.setState({fruits})
+      })
+    getAdvice()
+      .then(advice => {
+        console.log(advice)
       })
   }
 

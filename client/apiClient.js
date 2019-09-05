@@ -8,3 +8,11 @@ export function getFruits () {
       return res.body.fruits
     })
 }
+
+export function getAdvice () {
+  return request.get(rootUrl + '/get-advice')
+    .then(res => {
+      let slip = JSON.parse(res.body.text)
+      console.log(slip.slip.advice)
+    })
+}
