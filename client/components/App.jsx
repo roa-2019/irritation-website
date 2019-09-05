@@ -1,35 +1,15 @@
 import React from 'react'
 
-import { getFruits, getAdvice } from '../apiClient'
+import Footer from './Footer'
+import Main from './Main'
+import Nav from './Nav'
 
-class App extends React.Component {
-  state = {
-    fruits: []
-  }
-
-  componentDidMount () {
-    getFruits()
-      .then(fruits => {
-        this.setState({fruits})
-      })
-    getAdvice()
-      .then(advice => {
-        alert(advice)
-      })
-  }
-
-  render () {
-    return (
-      <div className='app'>
-        <h1>Fullstack Boilerplate</h1>
-        <ul>
-          {this.state.fruits.map(fruit => (
-            <li key={fruit}>{fruit}</li>
-          ))}
-        </ul>
-      </div>
-    )
-  }
+const App = () => {
+  <div>
+    <Nav />
+    <Main />
+    <Footer />
+  </div>
 }
 
-export default App
+export default App 
