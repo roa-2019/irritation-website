@@ -2,21 +2,20 @@ import React from 'react'
 import { getFruits, getAdvice } from '../apiClient'
 // import Footer from './Footer'
 import Main from './Main'
-// import Nav from './Nav'
 
-const App = () => {
-  getAdvice()
-    .then(advice => {
-      alert(advice)
-    })
+import Nav from './Nav'
+import Form from './Form'
 
-  return (
-    <div>
-      {/* <Nav /> */}
-      {/* <Main /> */}
-      {/* <Footer /> */}
-    </div>
-  )
-}
+
+const App = () => ( 
+   
+  <div>
+
+    <Nav />
+    <Form />
+    
+  </div>
+
+)
 
 export default App 
