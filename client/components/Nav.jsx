@@ -1,14 +1,18 @@
 import React from 'react'
 
 
-const Nav = () => {
+const Nav  = () => (
     <div>
-        <p>Home</p>
-        <p>News</p>
-        <p id='header'>Vegan Awareness</p>
-        <p id=''>Support</p>
-        <p>Contact</p>
+        <nav>
+        <ul> 
+        <li><a href="dfgdfg">Home</a></li>
+        <li><a href="dfgdfg">News</a></li>
+        <li><a href="dfgdfg">Support</a></li>
+        <li><a href="dfgdfg">Contact</a></li>
+        <li><img src="vegan-vibes.jpg" alt="logo" width="500px" className = "center"  ></img></li>
+        </ul>
+        </nav>
     </div>
-}
+)
 
 export default Nav
