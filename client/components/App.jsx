@@ -1,8 +1,8 @@
 import React from 'react'
 import { getFruits, getAdvice } from '../apiClient'
-import Footer from './Footer'
+// import Footer from './Footer'
 import Main from './Main'
-import Nav from './Nav'
+// import Nav from './Nav'
 
 const App = () => {
   getAdvice()
@@ -12,9 +12,9 @@ const App = () => {
 
   return (
     <div>
-      <Nav />
-      <Main />
-      <Footer />
+      {/* <Nav /> */}
+      {/* <Main /> */}
+      {/* <Footer /> */}
     </div>
   )
 }
