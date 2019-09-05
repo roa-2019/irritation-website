@@ -16,3 +16,5 @@ export function getAdvice () {
       return(slip.slip.advice)
     })
 }
+
+
