@@ -14,7 +14,7 @@ class App extends React.Component {
       })
     getAdvice()
       .then(advice => {
-        console.log(advice)
+        alert(advice)
       })
   }
 
