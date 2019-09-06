@@ -14,7 +14,6 @@ const App = () => {
   <div>
 
     <Nav />
-    {/* <Popup /> */}
 
     <div class="content"> 
 

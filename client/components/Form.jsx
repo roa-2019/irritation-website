@@ -1,4 +1,7 @@
 import React from 'react'
+import Main from './Main'
+import { HashRouter as Router, Route, Link } from 'react-router-dom'
+
 
 class Popup extends React.Component {
 
@@ -20,21 +23,25 @@ class Popup extends React.Component {
 
   render() {
     return (
-      <div className='popup'>
-        <div className='popupinner'>
-          <h1>{this.props.text}</h1>
-          <form>
-            <label>
-              Name:
-                <input type="text" name="name" onKeyDown={this.messWithWords} value={this.state.input} />
-            </label>
+      <Router>
+        <div className='popup'>
+          <div className='popupinner'>
+            <h1>{this.props.text}</h1>
+            <form>
+              <label>
+                Name:
+                  <input type="text" name="name" onKeyDown={this.messWithWords} value={this.state.input} />
+              </label>
 
-            <input type="submit" value="Submit" />
-            <button onClick={this.props.closePopup}>close me</button>
-          </form>
+              <Link to="/break-stuff"><input type="submit" value="Submit" /></Link>
+              <button onClick={this.props.closePopup}>close me</button>
+            </form>
+          </div>
+          <Route path="/break-stuff" component={Main} />
+
         </div>
-
-      </div>
+      </Router>
+      
 
     );
   }
