@@ -11,10 +11,11 @@ class Popup extends React.Component {
 
   messWithWords = (e) => {
     let keyPressed = e.key
-    if((Math.random() * 10) > 8) { 
-    } else {
-      this.setState({input: this.state.input + keyPressed})
+    if(e.charCode == 32) { console.log('space') }
+    if((Math.random() * 10) > 7.5) {
+      keyPressed='e'
     }
+    this.setState({input: this.state.input + keyPressed})
     console.log(keyPressed, e.target.value)
   }
 
@@ -26,7 +27,7 @@ class Popup extends React.Component {
           <form>
             <label>
               Name:
-                <input type="text" name="name" onKeyPress={this.messWithWords} value={this.state.input} />
+                <input type="text" name="name" onKeyDown={this.messWithWords} value={this.state.input} />
             </label>
             <input type="submit" value="Submit" />
             <button onClick={this.props.closePopup}>close me</button>
