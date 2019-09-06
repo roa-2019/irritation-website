@@ -1,24 +1,38 @@
 import React from 'react'
-import { getFruits, getAdvice } from '../apiClient'
+import getAdvice from '../apiClient'
 // import Footer from './Footer'
 import Main from './Main'
-// import Nav from './Nav'
-import Write from './Write'
+import Nav from './Nav'
+import Popup from './Form';  
+import Showpopup from './Showpopup'
+
+
 
 const App = () => {
-  getAdvice()
-    .then(advice => {
-      alert(advice)
-    })
+  giveAdvice()
+  return ( 
+  <div>
 
-  return (
-    <div>
-      {/* <Nav /> */}
-      <Main />
-      <Write />
-      {/* <Footer /> */}
+    <Nav />
+    {/* <Popup /> */}
+
+    <div class="content"> 
+
+    <Showpopup />
     </div>
+    {/* <Main /> */}
+
+  </div>
   )
+  }
+
+function giveAdvice () {
+  getAdvice().then(result => {
+    alert(result)
+  }) 
+
+  setTimeout(giveAdvice, 30000)
 }
+
 
 export default App 
