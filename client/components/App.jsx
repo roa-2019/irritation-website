@@ -3,6 +3,7 @@ import { getFruits, getAdvice } from '../apiClient'
 // import Footer from './Footer'
 import Main from './Main'
 // import Nav from './Nav'
+import Write from './Write'
 
 const App = () => {
   getAdvice()
@@ -13,7 +14,8 @@ const App = () => {
   return (
     <div>
       {/* <Nav /> */}
-      {/* <Main /> */}
+      <Main />
+      <Write />
       {/* <Footer /> */}
     </div>
   )

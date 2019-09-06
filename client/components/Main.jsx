@@ -12,8 +12,11 @@ export default class Main extends React.Component {
     for (let i = 0; i < newTabs; i++) {
       let newWindow = window.open('', '_blank', 'width=300, height=200')
       this.moveWindow(newWindow)
+      .then(newWindow.document.createTextNode('<p>Hello</p>'))
     }
   }
+
+
 
   moveWindow = (popup) => {
     const min = 0
@@ -32,7 +35,7 @@ export default class Main extends React.Component {
         popup.moveBy(random1, random2)
         count += 1
       }
-    }, 50)
+    }, 50000)
   }
 
   getRandomNum = (min, max) => {
