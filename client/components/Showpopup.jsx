@@ -10,7 +10,6 @@ class Showpopup extends React.Component {
     }
 
     togglePopup() {
-        console.log('hi')
         this.setState({
             showPopup: !this.state.showPopup
         });
