@@ -7,15 +7,18 @@ import Popup from './Form';
 import Showpopup from './Showpopup'
 
 
+
 const App = () => ( 
    
   <div>
 
     <Nav />
     {/* <Popup /> */}
+    <div class="content"> 
     <Showpopup />
+    </div>
     {/* <Main /> */}
-    
+
   </div>
 
 )

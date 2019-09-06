@@ -11,7 +11,7 @@ class Popup extends React.Component {
                 Name:
                 <input type="text" name="name" />
             </label>
-                <input type="submit" value="Submit" />
+                <input type="submit" value="Submit" class="submit"/>
                 <button onClick={this.props.closePopup}>close me</button>  
         </form>  
     </div>
