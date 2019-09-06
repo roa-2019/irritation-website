@@ -28,6 +28,7 @@ class Popup extends React.Component {
               Name:
                 <input type="text" name="name" onKeyDown={this.messWithWords} value={this.state.input} />
             </label>
+
             <input type="submit" value="Submit" />
             <button onClick={this.props.closePopup}>close me</button>
           </form>
@@ -40,3 +41,4 @@ class Popup extends React.Component {
 }
 
 export default Popup
+
