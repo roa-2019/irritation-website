@@ -1,16 +1,25 @@
 import React from 'react'
 
-
-const Form = () => (
-<div>
+class Popup extends React.Component {  
+    render() {  
+  return (  
+  <div className='popup'>  
+    <div className='popupinner'>  
+    <h1>{this.props.text}</h1>  
     <form>
-        <label>
-            Name:
-            <input type="text" name="name" />
-        </label>
-            <input type="submit" value="Submit" />
-    </form>  
-</div>
-)
-
-export default Form
+            <label>
+                Name:
+                <input type="text" name="name" />
+            </label>
+                <input type="submit" value="Submit" />
+                <button onClick={this.props.closePopup}>close me</button>  
+        </form>  
+    </div>
+    
+  </div>  
+ 
+  );  
+  }  
+  }  
+  
+  export default Popup
