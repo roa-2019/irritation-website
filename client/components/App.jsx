@@ -14,9 +14,11 @@ const App = () => (
 
     <Nav />
     {/* <Popup /> */}
+    <div class="content"> 
     <Showpopup />
+    </div>
     {/* <Main /> */}
-    
+
   </div>
 
 )

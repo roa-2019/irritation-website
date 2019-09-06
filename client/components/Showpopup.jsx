@@ -18,7 +18,7 @@ class Showpopup extends React.Component {
     render() {
         return (
             <div>
-                <h1> Simple Popup Example In React Application </h1>
+                <h1> Email sign up form! </h1>
                 <button onClick={this.togglePopup.bind(this)}> Click To Launch Popup</button>
 
                 {this.state.showPopup ?
