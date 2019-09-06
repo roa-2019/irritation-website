@@ -41,5 +41,9 @@ export default class Main extends React.Component {
     return Math.random() * (+max - +min) + +min;
   }
 
+  render () {
+    return null
+  }
+
 }
 
