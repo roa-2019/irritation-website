@@ -14,11 +14,17 @@ const App = () => {
   <div>
 
     <Nav />
+
     {/* <Popup /> */}
+
 
     <div class="content"> 
 
     <Showpopup />
+
+
+    <img src="tofuneverscreams.jpg" width="800px" class="tofu"></img>
+
     </div>
     {/* <Main /> */}
 

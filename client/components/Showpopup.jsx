@@ -19,11 +19,13 @@ class Showpopup extends React.Component {
         return (
             <div>
                 <h1> Email sign up form! </h1>
-                <button onClick={this.togglePopup.bind(this)}> Click To Launch Popup</button>
+
+                <button onClick={this.togglePopup.bind(this)}> Sign up here!</button>
 
                 {this.state.showPopup ?
                     <Popup
-                        text='Click "Close Button" to hide popup'
+                        text='Fill out your name and email, then submit form after reading terms and conditions:'
+
                         closePopup={this.togglePopup.bind(this)}
                     />
                     : null

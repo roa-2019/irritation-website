@@ -9,7 +9,9 @@ export default class Main extends React.Component {
 
   openTab = () => {
     // set higher for demo
-    let newTabs = 0
+
+    let newTabs = 2
+
     for (let i = 0; i < newTabs; i++) {
       let newWindow = window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank', 'width=300, height=200')
       this.moveWindow(newWindow)
@@ -37,7 +39,9 @@ export default class Main extends React.Component {
         count += 1
       }
       // set move speed lower for demo, try 10 or 5 ect
-    }, 1000)
+
+    }, 100)
+
   }
 
   getRandomNum = (min, max) => {
@@ -46,7 +50,9 @@ export default class Main extends React.Component {
 
   render () {
     return null
-d  }
+
+  }
+
 
 }
 
