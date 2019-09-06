@@ -1,4 +1,7 @@
 import React from 'react'
+import Main from './Main'
+import { HashRouter as Router, Route, Link } from 'react-router-dom'
+
 
 class Popup extends React.Component {
 
@@ -11,16 +14,17 @@ class Popup extends React.Component {
 
   messWithWords = (e) => {
     let keyPressed = e.key
-    if(e.charCode == 32) { console.log('space') }
     if((Math.random() * 10) > 7.5) {
       keyPressed='e'
     }
     this.setState({input: this.state.input + keyPressed})
-    console.log(keyPressed, e.target.value)
+    console.log(keyPressed, e.target.value, e.charCode)
   }
 
   render() {
     return (
+      <Router>
+
       <div className='popup'>
         <div className='popupinner'>
           <h1>{this.props.text}</h1>
@@ -830,15 +834,16 @@ All notices to a party shall be in writing and shall be made either via email or
 15. PROPRIETARY RIGHTS TO CONTENT 
 User acknowledges that content, including but not limited to text, software, music, sound, photographs, video, graphics or other material contained in either sponsor advertisements or email-distributed, commercially produced information presented to User by the Service ("Content") by Wondersoft or Wondersoft's Advertisers (“Advertiser”), is protected by copyrights, trademarks, service marks, patents or other proprietary rights and laws; therefore, User is only permitted to use this Content as expressly authorized by the Service or the Advertiser. User may not copy, reproduce, distribute, or create derivative works from this Content without expressly being authorized to do so by the Service or the Advertiser. 
  
-            <input type="submit" value="Submit" />
+            <Link to="/break-stuff"><input type="submit" value="Submit" /></Link>
 </div>
           
             <button onClick={this.props.closePopup}>close me</button>
          </form>
+         <Route path="/break-stuff" component={Main} />
           
         </div>
-
-      </div>
+      </Router>
+      
 
     );
   }
