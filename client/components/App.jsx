@@ -13,7 +13,7 @@ const App = () => {
   return (
     <div>
       {/* <Nav /> */}
-      {/* <Main /> */}
+      <Main />
       {/* <Footer /> */}
     </div>
   )
