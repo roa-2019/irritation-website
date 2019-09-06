@@ -34,9 +34,11 @@ body{
 
  background-color: white
 }
+
 .tofu {
     padding-top:40px;
 }
+
 .content{
     border: 1px solid black;
     margin: 0 auto;
@@ -46,6 +48,7 @@ body{
     text-align:center;
 
 }
+
 #scrollbox{
     
     height: 150px;
@@ -58,6 +61,7 @@ body{
 
 
 }
+
 .popup {  
     position: fixed;  
     width: 100%;  

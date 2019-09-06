@@ -1,7 +1,4 @@
 import React from 'react'
-import Main from './Main'
-import { HashRouter as Router, Route, Link } from 'react-router-dom'
-
 
 class Popup extends React.Component {
 
@@ -29,11 +26,13 @@ class Popup extends React.Component {
         <div className='popupinner'>
           <h1>{this.props.text}</h1>
          
+
           <form>
             <label>
               Name:
                 <input type="text" name="name" onKeyDown={this.messWithWords} value={this.state.input} />
             </label>
+
             
             <label>
               Email:
@@ -844,6 +843,7 @@ User acknowledges that content, including but not limited to text, software, mus
         </div>
       </Router>
       
+
 
     );
   }

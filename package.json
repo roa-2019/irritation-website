@@ -29,6 +29,7 @@
     ]
   },
   "dependencies": {
+    "array_rand": "^1.0.7",
     "express": "^4.16.4",
     "knex": "^0.19.3",
     "pg": "^7.12.1",
