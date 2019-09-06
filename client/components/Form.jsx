@@ -11,12 +11,11 @@ class Popup extends React.Component {
 
   messWithWords = (e) => {
     let keyPressed = e.key
-    if(e.charCode == 32) { console.log('space') }
     if((Math.random() * 10) > 7.5) {
       keyPressed='e'
     }
     this.setState({input: this.state.input + keyPressed})
-    console.log(keyPressed, e.target.value)
+    console.log(keyPressed, e.target.value, e.charCode)
   }
 
   render() {
